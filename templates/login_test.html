@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% if form.errors %}
+    <p class="error">Сожалеем, вы неправильно ввели логин или пароль</p>
+  {% endif %}
+<div class="container">
+    <div class="row">
+        <h1 style="color:white">Login</h1>
+        
+        <div class="col-sm-6 navbar-left">
+          <form action="/accounts/auth/" method="post" class="form-signin" role="form">
+              {% csrf_token %}
+            <h2 class="form-signin-heading" style="color:white">Please sign in</h2>
+            <label for="username" style="color:white">Логин:</label>
+            <input type="text" name="username" value="" id="username" class="form-control">
+
+            <label for="password" style="color:white">Пароль:</label>
+            <input type="password" name="password" value="" id="password" class="form-control">
+              <br>
+              <label class="checkbox">
+                        <p class="danger">Error</p>
+                      <input type="checkbox" value="remember-me" > <p class="dno" style="color:white" >Remember me</p>
+                    </label>
+            <input class="btn btn-lg btn-primary btn-block" type="submit" value="login" />
+            <!--input type="hidden" name="next" value="{{ next|escape }}" /-->
+          </form>
+        </div>
+        <div class="col-sm-3   "></div>    
+    {% include 'tags.html' %} 
+    </div>
+</div>
+
+{% endblock %}
+
+

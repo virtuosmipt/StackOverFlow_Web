@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+      
+      
+      
+      
+<div class="container">
+    <div class="row">
+        <h1>Login</h1>
+            <div class="col-sm-6 navbar-left">
+                  <form class="form-signin" role="form">
+                    <h2 class="form-signin-heading" style="color:white">Please sign in</h2>
+                      
+                    <!--input type="text" name="username" class="form-control" placeholder="Email address" required="" autofocus=""-->
+                      <input type="text" name="username" value="" id="username">
+                      <br>
+                    <!--input type="password" class="form-control" placeholder="Password" required=""-->
+                      <input type="password" name="password" value="" id="password">
+
+                    <label class="checkbox">
+                        <p class="danger">Error</p>
+                      <input type="checkbox" value="remember-me" > <p class="dno"  style="color:white">Remember me</p>
+                    </label>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" style="color:white">Sign in</button>
+                  </form>
+             <button class="btn btn-lg btn-info " style="color:white" >Creat new account</button>
+            </div>
+            
+        
+        
+<div class="col-sm-3   ">
+          </div>
+            
+
+
+        
+        
+        
+        
+    {% include 'tags.html' %} 
+  </div>      
+</div>
+{% endblock %}
+        
+        
+ 

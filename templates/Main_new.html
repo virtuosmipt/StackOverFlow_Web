@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}The current time{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+    
+        <h1>Login</h1>
+        
+         <div class="col-sm-6 navbar-left">
+             
+<form class="form-signin" role="form">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="email" class="form-control" placeholder="Email address" required="" autofocus="">
+        <input type="password" class="form-control" placeholder="Password" required="">
+        <label class="checkbox">
+            
+            
+       <p class="danger">Error</p>
+          <input type="checkbox" value="remember-me" > <p class="dno" >Remember me</p>
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    
+      </form>
+             <button class="btn btn-lg btn-info " >Creat new account</button>
+             
+          
+            
+            
+    </div>
+            
+        
+        
+          <div class="col-sm-3   ">
+          </div>
+            
+        
+        <div class="col-sm-1  blog-sidebar">
+            <div class="sidebar-module sidebar-module-inset">
+                <h4>Tags</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">PHP</a></li>
+              <li><a href="#">JAVA</a></li>
+              <li><a href="#">WEB</a></li>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">NGINX</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">IDEA</a></li>
+              <li><a href="#">JAVASCRIPT</a></li>
+              <li><a href="#">GUNICORN</a></li>
+              <li><a href="#">WSGI</a></li>
+              <li><a href="#">JANGO</a></li>
+              
+            </ol>
+          </div>
+            
+        </div>
+        
+        
+        
+        
+        
+  
+</div>      
+      </div>
+
+{% endblock %}

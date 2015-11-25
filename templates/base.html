@@ -1,0 +1,39 @@
+{% load static %}
+
+<html >
+  <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+       <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+       <link href="{% static 'bootstrap/css/style.css' %}" rel="stylesheet">
+       
+      <title>
+           StackOverFlow
+          {% block title %}{% endblock %}
+      </title>
+
+      <body>
+        {% include 'header.html' %}
+        {% block content %}{% endblock %}
+        {% block footer %}
+            <footer><p class="text" style="color: white">  Created by  <a href="https://track.mail.ru/profile/a.borodin/">Artemii Borodin</a></p></footer> 
+            
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
+          
+                <!--script src="{% static "js/bootstrap.min.js" %}"></script-->
+                <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+         
+         
+          
+        {% endblock %}
+      </body>
+      
+       
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+     
+  </body>
+</html>
+

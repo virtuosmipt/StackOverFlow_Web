@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row ">
+        <h1>StackOverFlow</h1>
+        <div class="col-sm-9">
+            
+            <h2 class="blog-post-title" style="color:white;">New Question</h2>
+            {% include 'question_ask_template.html' %}
+            <hr class="featurette-divider">
+                         {% include 'response_question_template.html' %}
+                         {% include 'response_question_template.html' %}
+                         {% include 'response_question_template.html' %}  
+            <hr class="featurette-divider">
+            <input type="text" class="form-control" placeholder="Enter your answer here" aria-describedby="sizing-addon1" style="height:150px">
+            <br>
+            <button class="btn btn-default">Answer</button>  
+        </div>
+        
+             {% include 'tags.html' %} 
+    </div>
+    
+</div> 
+
+ 
+ 
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+        {% block content %}
+                   
+    <div class="container">
+    <div class="row ">
+    
+        <h1>StackOverFlow</h1>
+        
+        
+        
+<div class="col-sm-10">
+            
+                <h2 class="blog-post-title">Search: Something</h2>
+            
+ <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1" >            
+                
+               
+                  
+            
+            
+            <br>
+            <br>
+            
+                
+                
+            
+            
+     {% include 'response_question_template.html' %}
+     {% include 'response_question_template.html' %}
+     {% include 'response_question_template.html' %}  
+            
+            
+             <hr class="featurette-divider">
+            
+      {% include 'pagination_template.html' %}       
+</div>
+        
+        
+    
+            
+               
+      
+        
+        
+        
+        
+        
+     
+        
+        
+        
+        
+    </div>
+</div>     
+        {% endblock %}

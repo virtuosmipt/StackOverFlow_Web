@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+ {% block content %}
+    
+<div class="container">
+    <div class="row ">
+    <h1 style="color:white">StackOverFlow</h1>
+        <div class="col-sm-8">
+            
+            {%include 'question_ask_template.html' %}
+            {%include 'question_ask_template.html' %}
+            {%include 'question_ask_template.html' %}
+            {% include 'pagination_template.html' %}
+               
+        </div>
+        
+        <div class="col-sm-3">
+
+        </div>
+        {% include 'tags.html' %}
+
+    </div>
+</div>      
+
+      
+  
+    
+  
+{% endblock %}
