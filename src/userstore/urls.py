@@ -34,7 +34,7 @@ urlpatterns = patterns('',
    
     url(r'^test/$', TemplateView.as_view(template_name="test.html")),
    # url(r'login_test/$',  login_user),
-    url(r'^registration/$', TemplateView.as_view(template_name="registration.html")),
+    url(r'^registration/$', TemplateView.as_view(template_name="registration.html"), name='registration'),
     #url(r'^login_test/$', TemplateView.as_view(template_name="login_test.html")),
                        
     url(r'^accounts/login/$', 'userstore.views.login'),

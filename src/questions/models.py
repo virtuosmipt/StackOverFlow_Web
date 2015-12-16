@@ -1,7 +1,8 @@
 from django.db import models
 from userstore.models import User
 from tags.models import Tags
-from django.conf import settings 
+from django.conf import settings
+from django.shortcuts import render
 
 #from userstore.models import User
 
@@ -15,11 +16,11 @@ class QuestionQuerySet(models.QuerySet):
         queryset = Question.objects.all().order_by('-rate')[:kolvo]
         return queryset
     def questionsBest(request, objects_num=5):
-        queryset = Question.objects.all().order_by('-rate')[:objects_num]
+        queryset = Question.objects.all()
         context = {
             "queryset": queryset,
         }
-        return render(request, 'last_question.html', context)
+        return render(request, 'last_questions.html', context)
 
 # Create your models here.
 class Question(models.Model):
@@ -27,8 +28,8 @@ class Question(models.Model):
     text_question = models.CharField(max_length=10000, default='SOME STRING')
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     tags = models.ManyToManyField(Tags)
-    rate = models.IntegerField(default=0)
-    date = models.DateTimeField(auto_now_add=True)
+    # rate = models.IntegerField(default=0)
+    # date = models.DateTimeField(auto_now_add=True)
 
     objects = QuestionQuerySet.as_manager()
 

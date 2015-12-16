@@ -1,6 +1,7 @@
 {% extends "base.html" %}
  {% block content %}
- {% for instance in queryset %}
+
+ {% for instance in objects.questionsBest %}
   <div class="container">
     <div class="row ">
     <h1 style="color:white">StackOverFlow</h1>
@@ -10,7 +11,7 @@
         <span class="col-sm-2">   <img  id="my-avatar" data-src="holder.js/500x500/auto" alt="50x50" src="/static/images/my_avatar.jpg " alt=""  width="80" height="100" class="img-rounded">
           <div class="btn-group btn-group-vertical">
                 <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-menu-up"></i></a>
-                <a href="#" class="btn btn-default"> </a>
+                <!--<a href="#" class="btn btn-default"> {{ instance.rate }}</a>-->
                 <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-menu-down"></i></a>
           </div>
         </span>
